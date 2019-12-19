@@ -1,0 +1,4 @@
+__pycache__
+/venv*
+/volumes
+/settings_django*_psql*.py

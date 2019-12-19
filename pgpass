@@ -1,0 +1,3 @@
+127.0.0.1:7096:*:postgres:postgres
+127.0.0.1:7010:*:postgres:postgres
+127.0.0.1:7115:*:postgres:postgres

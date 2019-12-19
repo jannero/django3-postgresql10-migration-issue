@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  postgresql9:
+    image: postgres:9.6
+    volumes:
+    - ./volumes/9.6:/pgdata
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      PGDATA: /pgdata
+    ports:
+      - '127.0.0.1:7096:5432/tcp'
+
+  postgresql10:
+    image: postgres:10-alpine
+    volumes:
+    - ./volumes/10:/pgdata
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      PGDATA: /pgdata
+    ports:
+      - '127.0.0.1:7010:5432/tcp'
+
+  postgresql11:
+    image: postgres:11.5-alpine
+    volumes:
+    - ./volumes/11.5:/pgdata
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      PGDATA: /pgdata
+    ports:
+      - '127.0.0.1:7115:5432/tcp'
